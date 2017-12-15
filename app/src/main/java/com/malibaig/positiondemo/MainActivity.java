@@ -87,4 +87,17 @@ public class MainActivity extends AppCompatActivity {
         valueAnimator.start();
 
     }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+
+        TextView tv1;
+        tv1 = (TextView) findViewById(R.id.tv_1);
+
+        Log.d(LOG_TAG, "TV1:getLeft:" + tv1.getLeft());
+        Log.d(LOG_TAG, "TV1:getTop:" + tv1.getTop());
+        Log.d(LOG_TAG, "TV1:getY:" + tv1.getY());
+        Log.d(LOG_TAG, "TV1:getX:" + tv1.getX());
+    }
 }
